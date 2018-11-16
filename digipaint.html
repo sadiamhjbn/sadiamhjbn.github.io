@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DigitalPainting</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/jgallery.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Black+And+White+Picture" rel="stylesheet">
+
+    <style>
+        body{
+            background: url("./images/bg.jpg") fixed center center;
+            background-size: cover;
+        }
+        .title{
+            font-family: 'Black And White Picture', sans-serif;
+            font-size: 4rem;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html">
+        <h1 class="text-center text-info title pt-1">Hijibiji</h1>
+    </a>
+    <div class="row d-flex justify-content-center">
+        <div class="border border-info" id="gallery">
+            <a href="./images/digi/sky-mine.jpg"><img src="./images/digi/sky-mine.jpg" alt="Photo 1" /></a>
+            <a href="./images/digi/birds.jpg"><img src="./images/digi/birds.jpg" alt="Photo 2" /></a>
+            <a href="./images/digi/ghashful.jpg"><img src="./images/digi/ghashful.jpg" alt="Photo 3" /></a>
+            <a href="./images/digi/girl.jpg"><img src="./images/digi/girl.jpg" alt="Photo 4" /></a>
+            <a href="./images/digi/romance.jpg"><img src="./images/digi/romance.jpg" alt="Photo 5" /></a>
+            <a href="./images/digi/sea.jpg"><img src="./images/digi/sea.jpg" alt="Photo 6" /></a>
+            <a href="./images/digi/sunrise.jpg"><img src="./images/digi/sunrise.jpg" alt="Photo 7" /></a>
+
+        </div>
+    </div>
+</div>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/jgallery.min.js"></script>
+<script type="text/javascript" src="./js/tinycolor-0.9.16.min.js"></script>
+<script src="./js/touchswipe.min.js"></script>
+
+<script type="text/javascript">
+    $( function(){
+        $( "#gallery" ).jGallery({
+            height: '80vh',
+            width: '60vh',
+            backgroundColor: '#1b1e21',
+            transition:"flipOutLeft_flipInRight",
+            transitionCols: 3,
+            showGallery: function () {
+                $('.jgallery').addClass('border border-info rounded')
+            }
+        });
+    } );
+</script>
+</body>
+</html>
