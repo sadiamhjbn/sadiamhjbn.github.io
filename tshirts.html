@@ -9,36 +9,87 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/jgallery.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Black+And+White+Picture" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Black+And+White+Picture|Courgette" rel="stylesheet">
 
     <style>
-        body{
+        body {
             background: url("./images/bg.jpg") fixed center center;
             background-size: cover;
         }
-        .title{
+
+        .title {
             font-family: 'Black And White Picture', sans-serif;
             font-size: 4rem;
         }
-        a:hover{
+
+        a:hover {
             text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a.nav-link {
+            font-family: 'Courgette', cursive;
+            font-size: large;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <a href="index.html">
-        <h1 class="text-center text-info title pt-1">Hijibiji</h1>
-    </a>
-    <div class="row d-flex justify-content-center">
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="./">
+            <h1 class="text-center text-info title pt-1">Hijibiji</h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="oil_paintings.html">Oil Paintings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="water_color.html">Water Color</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="mandalas.html">Mandala</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="sketches.html">Sketches</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="digipaint.html">Digital Paintings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bg-info text-white rounded" href="tshirts.html">T-shirts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="cover.html">Mobile Cover</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="maya.html">Maya</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-center pt-3">
+
         <div class="border border-info" id="gallery">
-            <a href="./images/t-shirts/kenshi.jpg"><img src="./images/t-shirts/kenshi.jpg" alt="Photo 1" /></a>
-            <a href="./images/t-shirts/tea.jpg"><img src="./images/t-shirts/tea.jpg" alt="Photo 2" /></a>
-            <a href="./images/t-shirts/logan.jpg"><img src="./images/t-shirts/logan.jpg" alt="Photo 3" /></a>
-            <a href="./images/t-shirts/ac.jpg"><img src="./images/t-shirts/ac.jpg" alt="Photo 4" /></a>
-            <a href="./images/t-shirts/cat.jpg"><img src="./images/t-shirts/cat.jpg" alt="Photo 5" /></a>
-            <a href="./images/t-shirts/dreamer.jpg"><img src="./images/t-shirts/dreamer.jpg" alt="Photo 6" /></a>
-            <a href="./images/t-shirts/meghdol.jpg"><img src="./images/t-shirts/meghdol.jpg" alt="Photo 7" /></a>
+            <a href="./images/t-shirts/kenshi.jpg"><img src="./images/t-shirts/kenshi.jpg" alt="Photo 1"/></a>
+            <a href="./images/t-shirts/tea.jpg"><img src="./images/t-shirts/tea.jpg" alt="Photo 2"/></a>
+            <a href="./images/t-shirts/logan.jpg"><img src="./images/t-shirts/logan.jpg" alt="Photo 3"/></a>
+            <a href="./images/t-shirts/ac.jpg"><img src="./images/t-shirts/ac.jpg" alt="Photo 4"/></a>
+            <a href="./images/t-shirts/cat.jpg"><img src="./images/t-shirts/cat.jpg" alt="Photo 5"/></a>
+            <a href="./images/t-shirts/dreamer.jpg"><img src="./images/t-shirts/dreamer.jpg" alt="Photo 6"/></a>
+            <a href="./images/t-shirts/meghdol.jpg"><img src="./images/t-shirts/meghdol.jpg" alt="Photo 7"/></a>
         </div>
     </div>
 </div>
@@ -50,19 +101,19 @@
 <script src="./js/touchswipe.min.js"></script>
 
 <script type="text/javascript">
-    $( function(){
-        $( "#gallery" ).jGallery({
+    $(function () {
+        $("#gallery").jGallery({
             height: '80vh',
             width: '60vh',
             backgroundColor: '#1b1e21',
             color: '#17a2b8',
-            transition:"flipOutLeft_flipInRight",
+            transition: "flipOutLeft_flipInRight",
             transitionCols: 3,
             showGallery: function () {
                 $('.jgallery').addClass('border border-info rounded')
             }
         });
-    } );
+    });
 </script>
 </body>
 </html>
