@@ -1,0 +1,38 @@
+body{
+    background: url("../images/bg.jpg") fixed center center;
+    background-size: cover;
+
+}
+.title{
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 4rem;
+}
+a:hover{
+    text-decoration: none;
+}
+a.nav-link {
+    font-family: 'Courgette', cursive;
+    font-size: large;
+}
+
+.jgallery .zoom-container .nav-bottom>.title {
+    font-family: cursive;
+    font-size: x-large;
+}
+
+.card-image-top{
+    height: 12rem;
+    object-fit: cover;
+}
+
+.placeholder{
+    height: 100vh;
+}
+.name{
+    font-family: 'Great Vibes', cursive;
+    font-size: 10rem;
+    text-shadow: 3px 3px 0 darkslategray, -3px 3px 0 darkslategray;
+}
+h3, p{
+    font-family: 'Courgette', cursive;
+}
