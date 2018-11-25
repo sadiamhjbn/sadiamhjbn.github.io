@@ -1,7 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes|Black+And+White+Picture|Courgette);
+
 @font-face {
     font-family: 'CHILLER';
     src: url('../fonts/CHILLER.eot');
     src: local('CHILLER'), url('../fonts/CHILLER.woff') format('woff'), url('../fonts/CHILLER.ttf') format('truetype');
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
@@ -60,6 +66,10 @@ ul {
     font-size: 4rem;
 }
 
+.intro {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.4), 0 9px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -89,6 +99,6 @@ a.nav-link {
     text-shadow: 3px 3px 0 darkslategray, -3px 3px 0 darkslategray;
 }
 
-h3, p {
+h1, h3, p {
     font-family: 'Courgette', cursive;
 }
