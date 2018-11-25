@@ -1,38 +1,94 @@
-body{
+@font-face {
+    font-family: 'CHILLER';
+    src: url('../fonts/CHILLER.eot');
+    src: local('CHILLER'), url('../fonts/CHILLER.woff') format('woff'), url('../fonts/CHILLER.ttf') format('truetype');
+}
+
+body {
     background: url("../images/bg.jpg") fixed center center;
     background-size: cover;
-
 }
-.title{
+
+body.home {
+    background: url("../images/bg1.jpg") fixed center center;
+}
+
+body.home a {
+    font-size: 2.5rem;
+    font-family: 'Chiller', cursive;
+    letter-spacing: .25rem;
+    font-weight: bold;
+
+    color: #0ac2d2;
+    text-shadow: 2px 2px #c2590e, -2px 2px #c2590e, 2px -2px #c2590e, -2px -2px #c2590e;
+
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+body.home li {
+    border-bottom: .25rem solid transparent;
+}
+
+body.home li:hover {
+    border-bottom: .25rem solid #0ac2d2;
+}
+
+@keyframes example {
+    33% {
+        color: #0ac2d2;
+        text-shadow: 2px 2px #c2590e, -2px 2px #c2590e, 2px -2px #c2590e, -2px -2px #c2590e;
+    }
+    50.5% {
+        color: #c2590e;
+        text-shadow: 2px 2px #0ac2d2, -2px 2px #0ac2d2, 2px -2px #0ac2d2, -2px -2px #0ac2d2;
+    }
+
+    83.5% {
+        color: #c2590e;
+        text-shadow: 2px 2px #0ac2d2, -2px 2px #0ac2d2, 2px -2px #0ac2d2, -2px -2px #0ac2d2;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.title {
     font-family: 'Black And White Picture', sans-serif;
     font-size: 4rem;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
 }
+
 a.nav-link {
     font-family: 'Courgette', cursive;
     font-size: large;
 }
 
-.jgallery .zoom-container .nav-bottom>.title {
+.jgallery .zoom-container .nav-bottom > .title {
     font-family: cursive;
     font-size: x-large;
 }
 
-.card-image-top{
+.card-image-top {
     height: 12rem;
     object-fit: cover;
 }
 
-.placeholder{
+.placeholder {
     height: 100vh;
 }
-.name{
+
+.name {
     font-family: 'Great Vibes', cursive;
     font-size: 10rem;
     text-shadow: 3px 3px 0 darkslategray, -3px 3px 0 darkslategray;
 }
-h3, p{
+
+h3, p {
     font-family: 'Courgette', cursive;
 }
