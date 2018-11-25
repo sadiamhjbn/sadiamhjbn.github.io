@@ -19,7 +19,7 @@ body.home {
     background: url("../images/bg1.jpg") fixed center center;
 }
 
-body.home a {
+body.home .anim a {
     font-size: 2.5rem;
     font-family: 'Chiller', cursive;
     letter-spacing: .25rem;
@@ -99,6 +99,6 @@ a.nav-link {
     text-shadow: 3px 3px 0 darkslategray, -3px 3px 0 darkslategray;
 }
 
-h1, h3, p {
+h1, h3, p, .lead a, .lead span {
     font-family: 'Courgette', cursive;
 }
