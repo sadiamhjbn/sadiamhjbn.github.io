@@ -45,6 +45,14 @@ body.home .navbar li:hover {
     border-bottom: .25rem solid var(--red);
 }
 
+.container-fluid {
+    background-color: #000000aa;
+}
+
+.navbar {
+    background-color: #f2690ed0;
+}
+
 @keyframes example {
     33% {
         color: #0ac2d2;
@@ -80,7 +88,7 @@ a:hover {
 
 a.nav-link {
     font-family: 'Courgette', cursive;
-    font-size: large;
+    font-size: x-large;
 }
 
 .jgallery .zoom-container .nav-bottom > .title {
