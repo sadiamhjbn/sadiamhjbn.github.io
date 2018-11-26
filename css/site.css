@@ -38,7 +38,11 @@ body.home li {
 }
 
 body.home li:hover {
-    border-bottom: .25rem solid #0ac2d2;
+    border-bottom: .25rem solid var(--cyan);
+}
+
+body.home .navbar li:hover {
+    border-bottom: .25rem solid var(--red);
 }
 
 @keyframes example {
@@ -90,7 +94,7 @@ a.nav-link {
 }
 
 .placeholder {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .name {
@@ -99,6 +103,6 @@ a.nav-link {
     text-shadow: 3px 3px 0 darkslategray, -3px 3px 0 darkslategray;
 }
 
-h1, h3, p, .lead a, .lead span {
+h1, h2, h3, h4, h5, p, .lead a, .lead span {
     font-family: 'Courgette', cursive;
 }
