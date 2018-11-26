@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Great+Vibes|Black+And+White+Picture|Courgette);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes|Black+And+White+Picture|Courgette|Cabin:400,600,700);
 
 @font-face {
     font-family: 'CHILLER';
@@ -103,6 +103,6 @@ a.nav-link {
     text-shadow: 3px 3px 0 darkslategray, -3px 3px 0 darkslategray;
 }
 
-h1, h2, h3, h4, h5, p, .lead a, .lead span {
+h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
     font-family: 'Courgette', cursive;
 }
