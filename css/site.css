@@ -17,7 +17,7 @@ body {
 
 body.home {
     background: url("../images/bg1.jpg") fixed center center;
-    background-size: cover;
+    background-size: contain;
 }
 
 body.home .anim a {
