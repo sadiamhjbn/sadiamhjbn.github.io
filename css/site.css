@@ -17,7 +17,13 @@ body {
 
 body.home {
     background: url("../images/bg1.jpg") fixed center center;
-    background-size: contain;
+    background-size: cover;
+}
+
+@media (max-width: var(--breakpoint-xs)) {
+    body.home{
+        background-size: auto 50%;
+    }
 }
 
 body.home .anim a {
