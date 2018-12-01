@@ -184,6 +184,7 @@
 <script src="./js/bootstrap.bundle.js"></script>
 
 <script>
+    let index;
     const data = [
         {
             title: 'Official Website of CSE Discipline, Khulna University',
@@ -230,48 +231,67 @@
                 {text: 'View Presentation', link: 'https://www.slideshare.net/ParvezMRobin/alien-invasion-76247703'}
             ]
         }
-
     ];
 
+
+    function updateModalInfo(info) {
+        $('#modal-title').text(info.title);
+        const $img = $('#modal-img');
+        $img.attr('src', './images/projects/' + info.img);
+        $img.attr('alt', info.title);
+        $('#modal-des').text(info.detail);
+        $('#modal-as').text(info.as);
+
+        let html = '<strong>' + info.techs[0] + '</strong>';
+        for (let i = 1; i < info.techs.length - 1; i++) {
+            const tech = info.techs[i];
+            html += ', <strong>' + tech + '</strong>'
+        }
+        if (info.techs.length > 1) {
+            html += ' and <strong>' + info.techs[info.techs.length - 1] + '</strong>'
+        }
+        $('#modal-techs').html(html);
+
+        const $footer = $('#modal-footer');
+        $footer.children().remove();
+
+        if (info.extra) {
+            for (let i = 0; i < info.extra.length; i++) {
+                const extra = info.extra[i];
+                const html = '<a href="' + extra.link + '" target="_blank" class="btn btn-outline-info">' + extra.text + '</a>'
+                $footer.append(html)
+            }
+            $footer.attr('hidden', false)
+        } else {
+            $footer.attr('hidden', true)
+        }
+    }
 
     $(document).ready(function () {
         $('.card').click(function (e) {
             const $this = $(this);
-            const index = $this.attr('data-index');
+            index = $this.attr('data-index');
             const info = data[index];
-            $('#modal-title').text(info.title);
-            const $img = $('#modal-img');
-            $img.attr('src', './images/projects/' + info.img);
-            $img.attr('alt', info.title);
-            $('#modal-des').text(info.detail);
-            $('#modal-as').text(info.as);
-
-            let html = '<strong>' + info.techs[0] + '</strong>';
-            for (let i = 1; i < info.techs.length - 1; i++) {
-                const tech = info.techs[i];
-                html += ', <strong>' + tech + '</strong>'
-            }
-            if (info.techs.length > 1) {
-                html += ' and <strong>' + info.techs[info.techs.length - 1] + '</strong>'
-            }
-            $('#modal-techs').html(html);
-
-            const $footer = $('#modal-footer');
-            $footer.children().remove();
-
-            if (info.extra) {
-                for (let i = 0; i < info.extra.length; i++) {
-                    const extra = info.extra[i];
-                    const html = '<a href="' + extra.link + '" target="_blank" class="btn btn-outline-info">' + extra.text + '</a>'
-                    $footer.append(html)
-                }
-                $footer.attr('hidden', false)
-            } else {
-                $footer.attr('hidden', true)
-            }
+            updateModalInfo(info);
 
             $('#modal').modal()
-        })
+        });
+
+        $('body').keyup(function (e) {
+            if ($('.modal.show').length > 0) {
+                if (e.key === "ArrowRight") {
+                    index++;
+                } else if (e.key === "ArrowLeft") {
+                    index--;
+                } else {
+                    return
+                }
+                index = (index + data.length) % data.length;
+                const info = data[index];
+
+                updateModalInfo(info);
+            }
+        });
     })
 </script>
 </body>
