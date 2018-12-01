@@ -20,12 +20,6 @@ body.home {
     background-size: cover;
 }
 
-@media (max-width: 768px) {
-    body.home{
-        background-size: auto 50%;
-    }
-}
-
 body.home .anim a {
     font-size: 2.5rem;
     font-family: 'Chiller', cursive;
@@ -120,6 +114,12 @@ a.nav-link {
     font-family: 'Great Vibes', cursive;
     font-size: 10rem;
     text-shadow: 3px 3px 0 darkslategray, -3px 3px 0 darkslategray;
+}
+
+@media (max-width: 768px) {
+    .name{
+        font-size: 5rem;
+    }
 }
 
 h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
