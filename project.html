@@ -9,14 +9,28 @@
     <link rel="stylesheet" href="./css/site.css">
 
     <style>
-        img {
-            height: 2em;
-            width: 2em;
+        .card {
+            background-color: #0ac2d250;
+            min-height: 25rem;
+            cursor: pointer;
         }
 
-        h1 span {
-            line-height: 2em;
+        .modal-content {
+            background-color: #0b3138;
         }
+
+        .modal-backdrop.show {
+            opacity: 0.85;
+        }
+
+        strong {
+            color: honeydew;
+        }
+
+        .text-info-light {
+            color: #01d7f8 !important;
+        }
+
     </style>
 </head>
 <body class="home">
@@ -54,21 +68,209 @@
         </nav>
     </div>
     <div class="container">
-        <div class="row placeholder" id="intro">
-            <div class="col d-flex align-items-center justify-content-center">
-                <div class="intro">
-                    <h1 class="p-5 text-white d-flex justify-content-center">
-                        <span>Hi! This is under construction.</span>
-                        <img src="./images/hudai.png" alt="">
-                    </h1>
+        <div class="row">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                <div class="card text-white" data-index="0">
+                    <img class="card-image-top" src="./images/projects/cseku.png"
+                         alt="Official Website of CSE Discipline, Khulna University">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Official Website of CSE Discipline, Khulna University</h3>
+
+                        <span class="badge badge-pill badge-success">PHP</span>
+                        <span class="badge badge-pill badge-success">Bootstrap</span>
+                        <span class="badge badge-pill badge-success">MySQL</span>
+                    </div>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                <div class="card text-white" data-index="1">
+                    <img class="card-image-top" src="./images/projects/cluster.png" alt="Official Website of CLUSTER">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Official Website of CLUSTER</h3>
+
+                        <span class="badge badge-pill badge-success">Laravel</span>
+                        <span class="badge badge-pill badge-success">Vue JS</span>
+                        <span class="badge badge-pill badge-success">Bootstrap</span>
+                        <span class="badge badge-pill badge-success">MySQL</span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                <div class="card text-white" data-index="2">
+                    <img class="card-image-top" src="./images/projects/scheduler.png" alt="Scheduler">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Scheduler</h3>
+
+                        <span class="badge badge-pill badge-success">Laravel</span>
+                        <span class="badge badge-pill badge-success">MySQL</span>
+                        <span class="badge badge-pill badge-success">Vue JS</span>
+                        <span class="badge badge-pill badge-success">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                <div class="card text-white" data-index="4">
+                    <img class="card-image-top" src="./images/projects/alien.png" alt="Alien Invasion">
+
+                    <div class="card-body">
+                        <h3 class="card-title">Alien Invasion</h3>
+
+                        <span class="badge badge-pill badge-success">C#</span>
+                        <span class="badge badge-pill badge-success">Unity 3D</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+                <div class="card text-white" data-index="3">
+                    <!--<img class="card-image-top" src="./images/projects/" alt="Attendance System">-->
+                    <span class="text-center name">AS</span>
+                    <div class="card-body">
+                        <h3 class="card-title">Attendance System</h3>
+
+                        <span class="badge badge-pill badge-success">ASP.Net</span>
+                        <span class="badge badge-pill badge-success">MySQL</span>
+                        <span class="badge badge-pill badge-success">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
+    <div class="container">
+        <footer class="py-5"></footer>
+    </div>
 </div>
+
+<!--region Modal-->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="project-detail"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-white">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">
+                </h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-img" src="#" class="img-fluid img-thumbnail" alt="">
+                <p id="modal-des" class="text-info-light pt-3">
+                </p>
+                <p class="text-info-light">
+                    Worked as <strong id="modal-as">full-stack developer</strong>.
+                    <br>
+                    Primarily worked with <span id="modal-techs"></span>
+                </p>
+            </div>
+            <div class="modal-footer" id="modal-footer">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--endregion-->
 
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/bootstrap.bundle.js"></script>
+
+<script>
+    const data = [
+        {
+            title: 'Official Website of CSE Discipline, Khulna University',
+            img: 'cseku.png',
+            detail: 'The official Website of CSE Discipline, Khulna University to maintain public ' +
+                'information of the faculty, course curriculum and updates about the discipline.',
+            as: 'full-stack developer',
+            techs: ['Bootstrap', 'PHP', 'MySQL'],
+            extra: [
+                {text: 'View Live Deployment', link: 'http://beta1.cseku.ac.bd/'}
+            ]
+        },
+        {
+            title: 'Official Website of CLUSTER',
+            img: 'cluster.png',
+            detail: 'Official website of CLUSTER — computer club of CSE discipline, Khulna University.',
+            as: 'front end designer',
+            techs: ['Bootstrap', 'Vue JS']
+        },
+        {
+            title: 'Scheduler',
+            img: 'scheduler.png',
+            detail: 'A task management application to organize the users\' daily schedules and task collaboration.',
+            as: 'front end designer',
+            techs: ['Bootstrap', 'Vue JS'],
+            extra: [
+                {text: 'View Presentation', link: 'https://www.slideshare.net/ParvezMRobin/scheduler-75043684'}
+            ]
+        },
+        {
+            title: 'Attendance System',
+            img: '',
+            detail: 'A digitalized attendance system with faculty to summarize the history and offer customizing marking scheme.',
+            as: 'front end designer',
+            techs: ['Bootstrap']
+        },
+        {
+            title: 'Alien Invasion',
+            img: 'alien.png',
+            detail: 'First person shooter game.',
+            as: 'designer',
+            techs: ['C#', 'Unity 3D'],
+            extra: [
+                {text: 'View Presentation', link: 'https://www.slideshare.net/ParvezMRobin/alien-invasion-76247703'}
+            ]
+        }
+
+    ];
+
+
+    $(document).ready(function () {
+        $('.card').click(function (e) {
+            const $this = $(this);
+            const index = $this.attr('data-index');
+            const info = data[index];
+            $('#modal-title').text(info.title);
+            const $img = $('#modal-img');
+            $img.attr('src', './images/projects/' + info.img);
+            $img.attr('alt', info.title);
+            $('#modal-des').text(info.detail);
+            $('#modal-as').text(info.as);
+
+            let html = '<strong>' + info.techs[0] + '</strong>';
+            for (let i = 1; i < info.techs.length - 1; i++) {
+                const tech = info.techs[i];
+                html += ', <strong>' + tech + '</strong>'
+            }
+            if (info.techs.length > 1) {
+                html += ' and <strong>' + info.techs[info.techs.length - 1] + '</strong>'
+            }
+            $('#modal-techs').html(html);
+
+            const $footer = $('#modal-footer');
+            $footer.children().remove();
+
+            if (info.extra) {
+                for (let i = 0; i < info.extra.length; i++) {
+                    const extra = info.extra[i];
+                    const html = '<a href="' + extra.link + '" target="_blank" class="btn btn-outline-info">' + extra.text + '</a>'
+                    $footer.append(html)
+                }
+                $footer.attr('hidden', false)
+            } else {
+                $footer.attr('hidden', true)
+            }
+
+            $('#modal').modal()
+        })
+    })
+</script>
 </body>
 </html>

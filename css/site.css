@@ -20,7 +20,7 @@ body.home {
     background-size: cover;
 }
 
-@media (max-width: var(--breakpoint-xs)) {
+@media (max-width: 768px) {
     body.home{
         background-size: auto 50%;
     }
