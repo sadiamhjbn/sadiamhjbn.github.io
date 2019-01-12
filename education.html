@@ -29,6 +29,16 @@
             font-family: Cabin, serif;
             font-size: larger;
         }
+        @media screen and (max-width: 600px) {
+            .hide {
+                visibility: hidden;
+                clear: both;
+                float: left;
+                margin: 10px auto 5px 20px;
+                width: 28%;
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="home">
@@ -72,13 +82,14 @@
             <div class="col-lg-10 offset-lg-1 mt-5">
                 <div class="card">
                     <div class="card-body row p-0 m-0">
-                        <div class="col-md-2 col-sm-3 col-4 bg-white rounded-left">
+                        <div class="col-md-2 col-sm-3 col-4 bg-white rounded-left hide">
                             <img src="./images/education/varsity.jpg" alt="University Logo" class="card-img">
                         </div>
                         <div class="col-md-10 col-sm-9 col-8 py-3">
                             <h3>Khulna University</h3>
                             <h4>Computer Science & Engineering</h4>
-                            <p class="text-white pt-3">
+                            <h4>CGPA: 3.43</h4>
+                            <p class="text-white">
                                 <strong>Courses includes</strong>
                                 Data Mining, Artificial Intelligence, Information Security, Pattern Recognition &
                                 Computer Graphics
@@ -90,12 +101,13 @@
             <div class="col-lg-10 offset-lg-1 mt-5">
                 <div class="card">
                     <div class="card-body row p-0 m-0">
-                        <div class="col-md-2 col-sm-3 col-4 bg-white rounded-left">
+                        <div class="col-md-2 col-sm-3 col-4 bg-white rounded-left hide">
                             <img src="./images/education/college.jpg" alt="College Logo" class="img-fluid">
                         </div>
                         <div class="col-md-10 col-sm-9 col-8 py-3">
                             <h3>Govt. Azizul Haque College, Bogura</h3>
                             <h4>Science Group</h4>
+                            <h4>CGPA: 5.0</h4>
                         </div>
                     </div>
                 </div>
@@ -103,13 +115,13 @@
             <div class="col-lg-10 offset-lg-1 mt-5">
                 <div class="card">
                     <div class="card-body row p-0 m-0">
-                        <div class="col-md-2 col-sm-3 col-4 bg-white rounded-left">
+                        <div class="col-md-2 col-sm-3 col-4 bg-white rounded-left hide">
                             <img src="./images/education/school.jpg" alt="School Logo" class="img-fluid">
                         </div>
                         <div class="col-md-10 col-sm-9 col-8 py-3">
                             <h3>Bogura Govt. Girls' High School, Bogura</h3>
                             <h4>Science Group</h4>
-
+                            <h4>CGPA: 5.0</h4>
                         </div>
                     </div>
                 </div>
