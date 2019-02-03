@@ -52,12 +52,61 @@ body.home .navbar li:hover {
     border-bottom: .25rem solid var(--warning);
 }
 
-.container-fluid {
-    background-color: #000000aa;
-}
-
 .home .navbar {
     background-color: #f2690ed0;
+}
+
+.navbar .navbar-nav .nav-link.bg-gallery {
+    background-color: #EE2A7B;
+}
+
+.text-gallery, .navbar .navbar-nav .nav-link {
+    color: #EE2A7B;
+}
+
+@media (max-width: 992px) {
+    .navbar .navbar-nav .nav-link {
+        background-color: #C69C6DD0;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+.home .navbar .navbar-nav .nav-link{
+    color: var(--dark);
+}
+
+.home .navbar .navbar-nav .nav-link:hover, .home .navbar .navbar-nav .active .nav-link{
+    color: var(--warning);
+}
+
+a.nav-link {
+    font-family: 'Courgette', cursive;
+    font-size: larger;
+}
+
+.home a.nav-link {
+    font-size: x-large;
+}
+
+.navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.home .navbar{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .375rem;
+        padding-left: .25rem;
+    }
+}
+
+.container-fluid {
+    background-color: #000000aa;
 }
 
 @keyframes example {
@@ -82,7 +131,7 @@ ul {
 
 .title {
     font-family: 'Black And White Picture', sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .intro {
@@ -92,20 +141,6 @@ ul {
 a:hover {
     text-decoration: none;
 }
-
-a.nav-link {
-    font-family: 'Courgette', cursive;
-    font-size: larger;
-}
-
-.home a.nav-link {
-    font-size: x-large;
-}
-
-:not(.home) .navbar{
-    padding-bottom: 0;
-}
-
 
 .jgallery .zoom-container .nav-bottom > .title {
     font-family: cursive;
@@ -128,18 +163,6 @@ a.nav-link {
     text-shadow: 3px 3px 0 #EE2A7B, -3px 3px 0 #EE2A7B;
 }
 
-.text-gallery, .navbar .navbar-nav .nav-link {
-    color: #EE2A7B;
-}
-
-.home .navbar .navbar-nav .nav-link{
-    color: var(--dark);
-}
-
-.home .navbar .navbar-nav .nav-link:hover, .home .navbar .navbar-nav .active .nav-link{
-    color: var(--warning);
-}
-
 .border-gallery {
     border-width: 2px;
     border-color: #b68C5D;
@@ -147,10 +170,6 @@ a.nav-link {
 
 .bg-gallery {
     background-color: #C69C6D;
-}
-
-.navbar .navbar-nav .nav-link.bg-gallery {
-    background-color: #EE2A7B;
 }
 
 @media (max-width: 768px) {
@@ -162,13 +181,6 @@ a.nav-link {
 
 h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
     font-family: 'Courgette', cursive;
-}
-
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: .375rem;
-        padding-left: .25rem;
-    }
 }
 
 /*JGallery Overrides*/
