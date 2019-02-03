@@ -11,7 +11,7 @@ html{
 }
 
 body {
-    background: url("../images/bg.jpg") fixed center center;
+    background: url("../images/bg.jpg") fixed top center;
     background-size: cover;
 }
 
@@ -21,17 +21,22 @@ body.home {
 }
 
 body.home .anim a {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'Chiller', cursive;
     letter-spacing: .25rem;
     font-weight: bold;
 
-    color: #0ac2d2;
-    text-shadow: 2px 2px #c2590e, -2px 2px #c2590e, 2px -2px #c2590e, -2px -2px #c2590e;
+    color: #0ab2ff;
+    text-shadow: 2px 2px #cc490e, -2px 2px #cc490e, 2px -2px #cc490e, -2px -2px #cc490e;
 
     animation-name: example;
     animation-duration: 8s;
     animation-iteration-count: infinite;
+}
+@media screen and (min-width: 768px) {
+    body.home .anim a{
+        font-size: 4rem;
+    }
 }
 
 body.home li {
@@ -56,17 +61,17 @@ body.home .navbar li:hover {
 
 @keyframes example {
     33% {
-        color: #0ac2d2;
-        text-shadow: 2px 2px #c2590e, -2px 2px #c2590e, 2px -2px #c2590e, -2px -2px #c2590e;
+        color: #0ab2ff;
+        text-shadow: 2px 2px #cc490e, -2px 2px #cc490e, 2px -2px #cc490e, -2px -2px #cc490e;
     }
     50.5% {
-        color: #c2590e;
-        text-shadow: 2px 2px #0ac2d2, -2px 2px #0ac2d2, 2px -2px #0ac2d2, -2px -2px #0ac2d2;
+        color: #cc490e;
+        text-shadow: 2px 2px #0ab2ff, -2px 2px #0ab2ff, 2px -2px #0ab2ff, -2px -2px #0ab2ff;
     }
 
     83.5% {
-        color: #c2590e;
-        text-shadow: 2px 2px #0ac2d2, -2px 2px #0ac2d2, 2px -2px #0ac2d2, -2px -2px #0ac2d2;
+        color: #cc490e;
+        text-shadow: 2px 2px #0ab2ff, -2px 2px #0ab2ff, 2px -2px #0ab2ff, -2px -2px #0ab2ff;
     }
 }
 
@@ -113,7 +118,20 @@ a.nav-link {
 .name {
     font-family: 'Great Vibes', cursive;
     font-size: 10rem;
-    text-shadow: 3px 3px 0 darkslategray, -3px 3px 0 darkslategray;
+    color: #FF8F26;
+    text-shadow: 3px 3px 0 #EE2A7B, -3px 3px 0 #EE2A7B;
+}
+.text-gallery{
+    color: #EE2A7B;
+}
+
+.border-gallery{
+    border-width: 2px;
+    border-color: #b68C5D;
+}
+
+.bg-gallery{
+    background-color: #C69C6D;
 }
 
 @media (max-width: 768px) {
@@ -125,4 +143,11 @@ a.nav-link {
 
 h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
     font-family: 'Courgette', cursive;
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .375rem;
+        padding-left: .25rem;
+    }
 }
