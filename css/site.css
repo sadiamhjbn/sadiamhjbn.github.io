@@ -102,6 +102,10 @@ a.nav-link {
     font-size: x-large;
 }
 
+.navbar{
+    padding-bottom: 0;
+}
+
 .jgallery .zoom-container .nav-bottom > .title {
     font-family: cursive;
     font-size: x-large;
