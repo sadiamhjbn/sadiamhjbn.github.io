@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background: url("../images/bg.jpg") fixed top center;
+    background: url("../images/bg.jpg") fixed center center;
     background-size: cover;
 }
 
@@ -102,9 +102,10 @@ a.nav-link {
     font-size: x-large;
 }
 
-.navbar{
+:not(.home) .navbar{
     padding-bottom: 0;
 }
+
 
 .jgallery .zoom-container .nav-bottom > .title {
     font-family: cursive;
@@ -155,7 +156,7 @@ a.nav-link {
 @media (max-width: 768px) {
     .name {
         font-size: 5rem;
-        text-shadow: 2px 1px 0 whitesmoke, -1px 2px 0 whitesmoke;
+        text-shadow: 2px 1px 0 #EE2A7B, -1px 2px 0 #EE2A7B;
     }
 }
 
