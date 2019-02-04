@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="../css/jgallery.min.css">
 
     <link rel="stylesheet" href="../css/site.css">
+
+    <style>
+        .jgallery[data-jgallery-id="1"] {
+            background: none !important;
+        }
+        .bg-yellowish{
+            background: #C69C6DBB !important;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -59,12 +68,26 @@
     </nav>
 </div>
 <div class="container">
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center bg-yellowish">
         <div class="border border-info" id="gallery">
-            <a href="../images/illustrator-jpeg/arnob.jpg"><img src="../images/illustrator-jpeg/arnob.jpg" alt="Photo 1" /></a>
-            <a href="../images/illustrator-jpeg/art.jpg"><img src="../images/illustrator-jpeg/art.jpg" alt="Photo 2" /></a>
-            <a href="../images/illustrator-jpeg/fluffy.jpg"><img src="../images/illustrator-jpeg/fluffy.jpg" alt="Photo 3" /></a>
-            <a href="../images/illustrator-jpeg/triangular-logo.jpg"><img src="../images/illustrator-jpeg/triangular-logo.jpg" alt="Photo 4" /></a>
+            <a href="../images/illustrator-jpeg/arnob.jpg">
+                <img src="../images/illustrator-jpeg/arnob.jpg" alt="Photo 1"/>
+            </a>
+            <a href="../images/illustrator-jpeg/art.jpg">
+                <img src="../images/illustrator-jpeg/art.jpg" alt="Photo 2"/>
+            </a>
+            <a href="../images/illustrator-jpeg/fluffy.jpg">
+                <img src="../images/illustrator-jpeg/fluffy.jpg" alt="Photo 3"/>
+            </a>
+            <a href="../images/illustrator-jpeg/triangular-logo.png">
+                <img src="../images/illustrator-jpeg/triangular-logo.png" alt="Photo 4"/>
+            </a>
+        </div>
+
+        <div class="text-center">
+            <p class="lead">
+                <a class="text-gallery" href="#" id="preview" target="_blank">View vector(ai) file</a>
+            </p>
         </div>
     </div>
 </div>
@@ -76,17 +99,22 @@
 <script src="../js/touchswipe.min.js"></script>
 
 <script type="text/javascript">
-    $( function(){
-        $( "#gallery" ).jGallery({
+    $(function () {
+        $("#gallery").jGallery({
             height: '80vh',
             width: '142vh',
-            transition:"flipOutLeft_flipInRight",
+            transition: "flipOutLeft_flipInRight",
             transitionCols: 3,
             showGallery: function () {
                 $('.jgallery').addClass('rounded')
+            },
+            showPhoto: function (anchor) {
+                const imgUrl = anchor.attr('href');
+                const vectorUrl = imgUrl.replace('jpeg', 'ai').replace('jpg', 'ai').replace('png', 'ai');
+                $('#preview').attr('href', vectorUrl);
             }
         });
-    } );
+    });
 </script>
 </body>
 </html>
