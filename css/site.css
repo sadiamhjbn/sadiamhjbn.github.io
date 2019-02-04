@@ -63,16 +63,20 @@ body.home .navbar li:hover {
 .navbar .navbar-nav .nav-link.bg-gallery {
     background-color: #EE2A7B;
 }
+.navbar .navbar-nav .nav-link.bg-gallery:hover {
+    background-color: #EE2A7B!important;
+}
 
-.text-gallery, .navbar .navbar-nav .nav-link {
+.text-gallery, .navbar .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {
     color: #EE2A7B;
+}
+.navbar .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .show>.dropdown-toggle{
+    color: white;
 }
 
 @media (max-width: 992px) {
     .navbar .navbar-nav .nav-link {
         background-color: #C69C6DD0;
-        padding-left: .5rem;
-        padding-right: .5rem;
     }
 }
 .home .navbar .navbar-nav .nav-link{
@@ -100,13 +104,6 @@ a.nav-link {
 .home .navbar{
     padding-top: .5rem;
     padding-bottom: .5rem;
-}
-
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: .375rem;
-        padding-left: .25rem;
-    }
 }
 
 .container-fluid {
@@ -192,6 +189,13 @@ h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
     background: #C69C6DBB !important;
 }
 
+.dropdown-menu{
+    background: #C69C6DBB;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+}
+
 .jgallery[data-jgallery-id="1"] .jgallery-thumbnails {
     /*Bottom Part*/
     background: none !important;
@@ -206,7 +210,8 @@ h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
     box-shadow: none !important;
 }
 
-.jgallery[data-jgallery-id="1"] .zoom-container .nav-bottom .icons, .jgallery[data-jgallery-id="1"] .zoom-container .nav-bottom .icons .fa {
+.jgallery[data-jgallery-id="1"] .zoom-container .nav-bottom .icons,
+.jgallery[data-jgallery-id="1"] .zoom-container .nav-bottom .icons .fa{
     /*Navigation Control Part*/
     background: none !important;
 }
@@ -214,4 +219,9 @@ h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
 .jgallery[data-jgallery-id="1"] .zoom-container:not([data-size="fill"]) .jgallery-container {
     /*Display Left and Right*/
     background: none !important;
+}
+
+ .dropdown-item:hover{
+    background: none !important;
+    color: white !important;
 }
