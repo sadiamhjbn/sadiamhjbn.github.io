@@ -77,6 +77,8 @@ body.home .navbar li:hover {
 @media (max-width: 992px) {
     .navbar .navbar-nav .nav-link {
         background-color: #C69C6DD0;
+        padding-left: .5rem;
+        padding-right: .5rem;
     }
 }
 .home .navbar .navbar-nav .nav-link{
@@ -193,6 +195,7 @@ h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
     background: #C69C6DBB;
     padding-top: 0;
     padding-bottom: 0;
+    margin: 0;
     border: none;
 }
 
