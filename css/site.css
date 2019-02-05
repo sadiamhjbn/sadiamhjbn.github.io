@@ -170,6 +170,10 @@ a:hover {
     background-color: #C69C6D;
 }
 
+.bg-gallery.card{
+    background-color: #C69C6DCC;
+}
+
 @media (max-width: 768px) {
     .name {
         font-size: 5rem;
