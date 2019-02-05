@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Starter Template</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style media="screen">
+    .nav2{
+        border:none;
+        background-color:skyblue;
+    }
+    .brand2{
+        font-size:50px;
+        font-weight:bold;
+        color:white;
+    }
+    .flexer{
+        display: flex;
+    }
+    .vertical-center{
+        align-items: center;
+    }
+    .horizontal-center{
+        justify-content: center;
+        width: 100%;
+    }
+
+    #text1{
+        font-size:90px;
+        text-align:center;
+        color:orange;
+    }
+    .waves-effect{
+        position:relative;
+        cursor:pointer;
+        display:inline-block;
+        overflow:hidden;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        -webkit-tap-highlight-color:transparent;
+        vertical-align:middle;
+        z-index:1;
+        transition:.3s;
+        margin-top: 30px;
+    }
+    .btn-large {
+        height: 54px;
+        color:#fff;
+        text-align:center;
+        letter-spacing: .5px;
+        border: none;
+        border-radius: 2px;
+        padding: 2rem;
+        text-transform: uppercase;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+        background-color: #ff9800;
+        font-family: "Roboto", sans-serif;
+        font-weight: normal;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-inverse nav2">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+
+                        <div class="col-md-2 navbar-brand brand2" style="color:white;line-height:.5em;padding-left:200px;display:inline-block;text-align:center">
+                            Logo
+                        </div>
+                        <button type="button" style="border:none;background-color:transparent" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" style="border:none" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" style="font-size:20px;color:white;line-height:2.5em;padding-right:300px">
+                                Navbar link
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2" id="text1">
+                    Starter Template
+                </div>
+                <div class="col-md-8 col-md-offset-2" style="font-size:25px;text-align:center">
+                    A modern responsive front-end framework based on Material Design
+                </div>
+                <div class="col-md-8 col-md-offset-2" style="text-align:center">
+                    <button class="waves-effect btn-large" type="button" name="button">Get Started</button>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-3" style="text-align:center">
+                    <img  src="./image/pic1.PNG" alt="" >
+                    <h4 style="font-weight:bold;text-align:center">Speeds up development</h4>
+                    <p>We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+                </div>
+                <div class="col-md-2" style="text-align:center">
+                    <img src="./image/pic2.PNG" alt="" >
+                    <h4 style="font-weight:bold">User Experience Focused</h4>
+                    <p>By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+                </div>
+                <div class="col-md-2" style="text-align:center">
+                    <img src="./image/pic3.PNG" alt="" >
+                    <h4 style="font-weight:bold">Easy to work with</h4>
+                    <p>We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
