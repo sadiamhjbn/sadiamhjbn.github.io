@@ -25,7 +25,7 @@ body.home {
 }
 
 body.home .anim a {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Chiller', cursive;
     letter-spacing: .25rem;
     font-weight: bold;
@@ -40,7 +40,7 @@ body.home .anim a {
 
 @media screen and (min-width: 768px) {
     body.home .anim a {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
 
@@ -145,11 +145,6 @@ a:hover {
     text-decoration: none;
 }
 
-.jgallery .zoom-container .nav-bottom > .title {
-    font-family: cursive;
-    font-size: x-large;
-}
-
 .card-image-top {
     height: 12rem;
     object-fit: cover;
@@ -187,6 +182,11 @@ h1, h2, h3, h4, h5, p.lead, .lead a, .lead span {
 }
 
 /*JGallery Overrides*/
+.jgallery .zoom-container .nav-bottom > .title {
+    font-family: cursive;
+    font-size: x-large;
+}
+
 .jgallery[data-jgallery-id="1"] {
     background: #C69C6DBB !important;
 }
