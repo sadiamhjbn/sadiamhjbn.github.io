@@ -7,27 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RGB Converter</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        .btn-outline-light:active, .btn-outline-light:focus {
+            color: #212529;
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+    </style>
 </head>
-<body style="background-color: #1b1e21">
+<body style="background-color: #0d1e31">
 <div class="d-flex align-items-center justify-content-center"  style="height: 100vh">
-    <div class="row mt-5 pt-5 pl-5 pr-5 pb-5" style="background-color: #0c5460; min-width: 50em; border-radius: 1em;">
+    <div class="row mt-5 pt-5 pl-5 pr-5 pb-5" style="background-color: #0c5460; min-width: 50em; border-radius: .2em;box-shadow: 5px 5px 10px #06171a">
 
         <div class="col">
-            <form >
+            <div >
                 <div class="form-group text-white row">
                     <label class="col-form-label col-4" for="hex" >Hex Code</label>
                     <div class="col-8">
-                        <input type="text" class="form-control" id="hex" name="hex" placeholder="#hexcode/ hex code">
+                        <input type="text" class="form-control" id="hex" name="hex" placeholder="#hexcode / hex code">
                     </div>
                 </div>
                 <div style="margin-left: 7.3em">
                     <button onclick="hexToRgb()" type="button" class="btn btn-outline-light">Convert</button>
                 </div>
 
-            </form>
+            </div>
         </div>
         <div class="col">
-            <form>
+            <div>
                 <div class="form-group text-white row">
                     <label class="col-form-label col-4" for="rgb" >RGB/RGBA</label>
                     <div class="col-8">
@@ -39,7 +46,7 @@
                     <button onclick="rgbToHex()" type="button" class="btn btn-outline-light">Convert</button>
                 </div>
 
-            </form>
+            </div>
         </div>
     </div>
 
