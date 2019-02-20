@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body style="background-color: #1b1e21">
+<div class="d-flex align-items-center justify-content-center"  style="height: 100vh">
+    <div class="row mt-5 pt-5 pl-5 pr-5 pb-5" style="background-color: #0c5460; min-width: 50em; border-radius: 1em;">
+
+        <div class="col">
+            <form >
+                <div class="form-group text-white row">
+                    <label class="col-form-label col-4" for="hex" >Hex Code</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="hex" name="hex" placeholder="#hexcode/ hex code">
+                    </div>
+                </div>
+                <div style="margin-left: 7.3em">
+                    <button onclick="hexToRgb()" type="button" class="btn btn-outline-light">Convert</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="col">
+            <form>
+                <div class="form-group text-white row">
+                    <label class="col-form-label col-4" for="rgb" >RGB/RGBA</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="rgb" name="rgb" placeholder="r,g,b / r,g,b,a">
+                    </div>
+
+                </div>
+                <div style="margin-left: 7.3em">
+                    <button onclick="rgbToHex()" type="button" class="btn btn-outline-light">Convert</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+    function hexToRgb() {
+        var hex = document.getElementById("hex").value;
+
+        if(hex[0]==="#"){
+            hex = hex.replace('#','');
+
+        }
+        document.body.style.backgroundColor = '#'+hex;
+        if(hex.length===6){
+
+            var r = parseInt(hex.substring(0,2), 16);
+            var g = parseInt(hex.substring(2,4), 16);
+            var b = parseInt(hex.substring(4,6), 16);
+            document.getElementById("rgb").value = r+','+g+','+b;
+        }
+        else if(hex.length===8){
+
+            r = parseInt(hex.substring(0,2), 16);
+            g = parseInt(hex.substring(2,4), 16);
+            b = parseInt(hex.substring(4,6), 16);
+            var a = parseInt(hex.substring(6,8), 16)/255;
+            a = a.toPrecision(2);
+            document.getElementById("rgb").value = r+','+g+','+b+','+a;
+        }
+        else if(hex.length===3){
+            r = parseInt(""+hex.substring(0,1)+hex.substring(0,1), 16);
+            g = parseInt(""+hex.substring(1,2)+hex.substring(1,2), 16);
+            b = parseInt(""+hex.substring(2,3)+hex.substring(2,3), 16);
+            document.getElementById("rgb").value = r+','+g+','+b;
+        }
+        else{
+            alert("Inappropriate hex code");
+        }
+
+
+    }
+    function rgbToHex() {
+        var rgb = document.getElementById("rgb").value;
+        document.body.style.backgroundColor = 'rgb('+rgb+')';
+
+        for(var i=0; i<=rgb.length; i++){
+            if(rgb[i]===isNaN && rgb[i]!==','){
+                alert("Inappropriate RGB value");
+            }
+        }
+        var comma1 = rgb.indexOf(",");
+        var red = rgb.substring(0,comma1);
+
+        var gba = rgb.substring(comma1+1,rgb.length);
+        var comma2 = gba.indexOf(",");
+        var green = gba.substring(0,comma2);
+
+        var ba = gba.substring(comma2+1, rgb.length);
+        if(ba.length>3){
+            var comma3 = ba.indexOf(",");
+            var blue = ba.substring(0,comma3);
+            var alpha = ba.substring(comma3+1, rgb.length)
+        }
+        else {
+            var blue = ba;
+            alpha = "0";
+        }
+
+
+
+        if(red<=255 && green<=255 && blue<=255){
+            if(red <=15 || green<=15 || blue<=15){
+                if(red<=15){
+                    red = ""+(parseInt(red)).toString(16)+(parseInt(red)).toString(16);
+                }
+                if(green<=15 ){
+                    green = ""+(parseInt(green)).toString(16)+(parseInt(green)).toString(16);
+                }
+                if(blue<=15){
+                    blue = ""+(parseInt(blue)).toString(16)+(parseInt(blue)).toString(16);
+                }
+                alpha = (parseInt(alpha*255)).toString(16);
+            }
+            else {
+                red = (parseInt(red)).toString(16);
+                green = (parseInt(green)).toString(16);
+                blue = (parseInt(blue)).toString(16);
+                alpha = (parseInt(alpha*255)).toString(16);
+            }
+            if(alpha==='0'){
+                document.getElementById("hex").value = '#'+red+green+blue;
+            }
+            else {
+                document.getElementById("hex").value = '#'+red+green+blue+alpha;
+            }
+
+
+        }
+        else{
+            alert("Inappropriate RGB value");
+        }
+
+    }
+
+</script>
+</body>
+</html>
