@@ -19,12 +19,15 @@
     </style>
 </head>
 <body>
+<div data-toggle="tooltip" title="Click any title to view full album" data-placement="left" style="position: fixed; top:2rem; right: 0;"></div>
 <div class="container">
-    <h1 class="text-center text-gallery title pt-5">
-        <a href="../"><i class="fa fa-home float-left text-gallery" aria-hidden="true"></i></a>
-        Hijibiji
-    </h1>
-    <hr class="border-gallery">
+   <div>
+       <h1 class="text-center text-gallery title pt-5">
+           <a href="../"><img style="height: 1.5em" class="float-left text-gallery" src="../favicon.ico" alt=""  ></a>
+           Hijibiji
+       </h1>
+       <hr class="border-gallery" >
+   </div>
     <div class="row placeholder">
         <div class="col">
             <div class="card-group pt-5">
@@ -125,7 +128,12 @@
         $('.card').click(function () {
             const target = $(this).attr('data-target');
             window.open(target, '_self');
-        })
+        });
+        function showTooltip(){
+            $('[data-toggle="tooltip"]').tooltip('show');
+        }
+        setTimeout(showTooltip,10000);
+
     })
 </script>
 </body>
