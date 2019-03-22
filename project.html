@@ -272,6 +272,9 @@
     }
 
     $(document).ready(function () {
+        $('#modal').on('shown.bs.modal', function (e) {
+            $('[data-toggle="tooltip"]').tooltip('hide');
+        });
         function showTooltip(){
             $('[data-toggle="tooltip"]').tooltip('show');
         }
