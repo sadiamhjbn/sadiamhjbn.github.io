@@ -37,7 +37,20 @@
 </head>
 <body class="home">
 <div class="container-fluid placeholder">
-    <div data-toggle="tooltip" title="Click any title to view project details" data-placement="left" style="position: fixed; top:2rem; right: 0;"></div>
+    <!--<div data-toggle="tooltip" title="Click any title to view project details" data-placement="left" style="position: fixed; top:2rem; right: 0;"></div>-->
+    <div class="toast" style="position: fixed; top: 2rem; right: 0; z-index: 1020;" data-autohide="false">
+        <div class="toast-header" >
+            <div class="p-2 mr-1 rounded" style="background-color: #f2690e"></div>
+            <strong style="color: #1d2124 ">Do you know?</strong>
+            <button type="button" class="ml-2 mb-1 ml-auto close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            <div class="mr-auto" style="font-weight: 500" >You can click any title to view project detail.</div>
+
+        </div>
+    </div>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
@@ -273,12 +286,12 @@
 
     $(document).ready(function () {
         $('#modal').on('shown.bs.modal', function (e) {
-            $('[data-toggle="tooltip"]').tooltip('hide');
+            $('.toast').toast('hide');
         });
-        function showTooltip(){
-            $('[data-toggle="tooltip"]').tooltip('show');
+        function showToast(){
+            $('.toast').toast('show');
         }
-        setTimeout(showTooltip,10000);
+        setTimeout(showToast,10000);
         $('.card').click(function (e) {
             const $this = $(this);
             index = $this.attr('data-index');
