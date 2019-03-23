@@ -13,21 +13,36 @@
     <link rel="stylesheet" href="../css/site.css">
 
     <style>
-        .card{
+        .card {
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-<div data-toggle="tooltip" title="Click any title to view full album" data-placement="left" style="position: fixed; top:2rem; right: 0;"></div>
+<!--<div data-toggle="tooltip" title="" data-placement="left" style="position: fixed; top:2rem; right: 0;"></div>-->
+<div class="toast" style="position: fixed; top: 2rem; right: 0; z-index: 1020;" data-autohide="false">
+    <div class="toast-header" >
+        <div class="p-2 mr-1 rounded" style="background-color: #EE2A7B"></div>
+        <strong>Do you know?</strong>
+        <button type="button" class="ml-2 mb-1 ml-auto close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        <div class="mr-auto" style="font-weight: 500">You can click any title to view full album.</div>
+
+    </div>
+</div>
+
 <div class="container">
-   <div>
-       <h1 class="text-center text-gallery title pt-5">
-           <a href="../"><img style="height: 1.5em;margin-top: -.22em" class="float-left text-gallery" src="../images/logo.png" alt=""  ></a>
-           Hijibiji
-       </h1>
-       <hr class="border-gallery" >
-   </div>
+    <div>
+        <h1 class="text-center text-gallery title pt-5">
+            <a href="../"><img style="height: 1.5em;margin-top: -.22em" class="float-left text-gallery"
+                               src="../images/logo.png" alt=""></a>
+            Hijibiji
+        </h1>
+        <hr class="border-gallery">
+    </div>
     <div class="row placeholder">
         <div class="col">
             <div class="card-group pt-5">
@@ -116,7 +131,7 @@
     </div>
     <br>
     <div class="row placeholder d-flex align-items-center justify-content-center mt-5">
-        <h1 class="name">Sadia Mahjabin</h1>
+        <!--<h1 class="name">Sadia Mahjabin</h1>-->
     </div>
 </div>
 
@@ -129,10 +144,11 @@
             const target = $(this).attr('data-target');
             window.open(target, '_self');
         });
-        function showTooltip(){
-            $('[data-toggle="tooltip"]').tooltip('show');
+
+        function showToast(){
+            $('.toast').toast('show');
         }
-        setTimeout(showTooltip,10000);
+        setTimeout(showToast,10000);
 
     })
 </script>
