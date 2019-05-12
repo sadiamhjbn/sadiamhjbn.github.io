@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DigitalPortrait</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/jgallery.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Black+And+White+Picture|Courgette" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="./">
+            <h1 class="text-center text-gallery title pt-1">Hijibiji</h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="painting" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Paintings
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="painting">
+                        <a class="dropdown-item nav-link" href="oil_paintings.html">Oil Paintings</a>
+                        <a class="dropdown-item nav-link" href="water_color.html">Water Color</a>
+                        <a class="dropdown-item nav-link" href="mandalas.html">Mandala</a>
+                        <a class="dropdown-item nav-link" href="sketches.html">Sketches</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="digital" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Digital
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="digital">
+                        <a class="dropdown-item nav-link" href="digipaint.html">Digital Paintings</a>
+                        <a class="dropdown-item nav-link" href="illustrator.html">Illustration</a>
+                        <a class="dropdown-item nav-link bg-gallery text-white rounded" href="portrait.html">Portraits</a>
+                        <a class="dropdown-item nav-link" href="maya.html">Maya</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="tshirts.html">T-shirts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="cover.html">Mobile Cover</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="border border-info" id="gallery">
+            <a href="../images/portrait/robin.jpg"><img src="../images/portrait/robin.jpg" alt="Robin" /></a>
+            <a href="../images/portrait/kongkon.jpg"><img src="../images/portrait/kongkon.jpg" alt="Kongkon" /></a>
+            <a href="../images/portrait/farabee.jpg"><img src="../images/portrait/farabee.jpg" alt="Farabee" /></a>
+            <a href="../images/portrait/meem.jpg"><img src="../images/portrait/meem.jpg" alt="Meem" /></a>
+            <a href="../images/portrait/taki.jpg"><img src="../images/portrait/taki.jpg" alt="Taki" /></a>
+            <a href="../images/portrait/sonam.jpg"><img src="../images/portrait/sonam.jpg" alt="Sonam" /></a>
+            <a href="../images/portrait/turna.jpg"><img src="../images/portrait/turna.jpg" alt="Turna" /></a>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/jgallery.min.js"></script>
+<script type="text/javascript" src="../js/tinycolor-0.9.16.min.js"></script>
+<script src="../js/touchswipe.min.js"></script>
+
+<script type="text/javascript">
+    $( function(){
+        $( "#gallery" ).jGallery({
+            height: '80vh',
+            width: '142vh',
+            transition:"flipOutLeft_flipInRight",
+            transitionCols: 3,
+            browserHistory: false,
+            showGallery: function () {
+                $('.jgallery').addClass('rounded')
+            }
+        });
+    } );
+</script>
+</body>
+</html>
