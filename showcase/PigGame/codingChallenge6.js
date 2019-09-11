@@ -75,6 +75,12 @@ function nextPlayer() {
 }
 
 document.querySelector('.btn-new').addEventListener('click', init);
+document.querySelector('.btn-rules').addEventListener('click', function () {
+   alert('1. Roll the dices and hold to add scores\n' +
+       '2. If you get a 1 you will lose all the scores\n' +
+       '3. The player obtaining final scores first will be the winner\n' +
+       '4. Default final score is 100\n')
+});
 
 function init() {
     scores = [0, 0];

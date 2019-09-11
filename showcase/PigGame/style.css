@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 #dice-1{
@@ -102,7 +102,7 @@ body {
     color: #EB4D4D;
     top: -7px;
     right: 10px;
-    
+
 }
 
 .player-current-box {
@@ -133,7 +133,7 @@ button {
     color: #555;
     background: none;
     border: none;
-    font-family: Lato;
+    font-family: Lato, serif;
     font-size: 20px;
     text-transform: uppercase;
     cursor: pointer;
@@ -159,7 +159,8 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+.btn-rules{top:70px;}
+.btn-new { top: 20px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
